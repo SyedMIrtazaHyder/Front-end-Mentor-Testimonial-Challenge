@@ -1,0 +1,148 @@
+html{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: white;
+    background-color: #CCCCCC;
+    font-size: 13px;
+}
+
+*, *:before, *:after{
+    border-radius: 7px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+main{
+    display: flex;
+    display: column;
+    width: 1100px;
+    height: 700px;
+}
+
+#Jean, #Dan, #John, #Pat{
+    margin: 10px;
+}
+
+#four{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+#Kira{
+    background-color: #FFFFFF;
+    color: #333333;
+    width: 21%;
+    margin: 10px;
+    height: 80%;
+  }
+
+#top, #bottom{
+    display: flex;
+    box-sizing: border-box;
+    height: 40%;
+}
+
+  #Dan{
+    background-color: #733FC8;
+    flex-basis: 50%;
+  }
+
+  #John{
+    background-color: #49556B;
+    flex-basis: 29%;
+  }
+
+  #Jean{
+    background-color: #FFFFFF;
+    color: #333333;
+    flex-basis: 29%;
+  }
+
+  #Pat{
+    background-color: #333333;
+    flex-basis: 55%;
+  }
+
+#Dan, #Pat{
+    flex-grow: 1;
+}
+
+
+  #bold{
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  #quotes{
+    opacity: 60%;
+    font-weight: 500;
+  }
+
+    #content{
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  #Prof{
+    opacity: 50%;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+    flex-direction: column;
+  }
+
+  img{
+    border-radius: 100%;
+    border: 1px solid #904DFA;
+    height: 30px;
+    width: 30px;
+  }
+
+  #info{
+    display: flex;
+  }
+
+  #Name{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  #Jean img, #John img, #Kira img{
+    border: 1px solid white;
+  }
+
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+}
+
+#quotation{
+    position: absolute;
+    border: none;
+    border-radius: 0;
+    padding-left: 333px;
+    height: 95px;
+    width: auto;
+}
+
+@media (max-width: 1300px){
+  main, #four, #bottom, #top{
+    flex-direction: column;
+    height: 100%;
+    width: auto;
+  }
+
+  #Kira{
+    flex-basis: 20%;
+    width: inherit;
+  }
+
+  #quotation{
+    padding-left: 30%;
+  }
+}
