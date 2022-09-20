@@ -1,148 +1,204 @@
 html{
+    font-size: 13px;
     font-family: 'Barlow Semi Condensed', sans-serif;
     color: white;
     background-color: #CCCCCC;
-    font-size: 13px;
 }
 
 *, *:before, *:after{
-    border-radius: 7px;
-    margin: 0;
     box-sizing: border-box;
-  }
+}
 
 main{
     display: flex;
-    display: column;
-    width: 1100px;
-    height: 700px;
 }
 
-#Jean, #Dan, #John, #Pat{
-    margin: 10px;
-}
-
-#four{
+body{
     display: flex;
-    flex-direction: column;
-    width: 70%;
-}
-
-#Kira{
-    background-color: #FFFFFF;
-    color: #333333;
-    width: 21%;
-    margin: 10px;
-    height: 80%;
-  }
-
-#top, #bottom{
-    display: flex;
-    box-sizing: border-box;
-    height: 40%;
-}
-
-  #Dan{
-    background-color: #733FC8;
-    flex-basis: 50%;
-  }
-
-  #John{
-    background-color: #49556B;
-    flex-basis: 29%;
-  }
-
-  #Jean{
-    background-color: #FFFFFF;
-    color: #333333;
-    flex-basis: 29%;
-  }
-
-  #Pat{
-    background-color: #333333;
-    flex-basis: 55%;
-  }
-
-#Dan, #Pat{
-    flex-grow: 1;
-}
-
-
-  #bold{
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-
-  #quotes{
-    opacity: 60%;
-    font-weight: 500;
-  }
-
-    #content{
-    padding: 20px;
-    box-sizing: border-box;
-    position: relative;
-  }
-
-  #Prof{
-    opacity: 50%;
-    margin-bottom: 20px;
-    font-size: 0.8rem;
-    flex-direction: column;
-  }
-
-  img{
-    border-radius: 100%;
-    border: 1px solid #904DFA;
-    height: 30px;
-    width: 30px;
-  }
-
-  #info{
-    display: flex;
-  }
-
-  #Name{
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-  }
-
-  #Jean img, #John img, #Kira img{
-    border: 1px solid white;
-  }
-
-body {
-    justify-content: center;
     align-items: center;
-    display: flex;
+    justify-content: center;
     height: 100vh;
 }
 
-#quotation{
+#left{
+    width: 762px;
+}
+
+#right{
+    width: 239px;
+}
+
+#left, #right{
+    margin: 10px;
+}
+
+#top, #bottom{
+    display: flex;
+}
+
+#top{
+    flex-basis: 6;
+}
+
+#bottom{
+    flex-basis: 4;
+}
+
+#box, #box-two, #box-three, #box-four, #box-five{
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#box-two, #box-three{
+    width: 31%;
+}
+
+#box, #box-four{
+    width: 70%;
+}
+
+#box-five{
+    height: 100%;
+    background-color: #FFFFFF;
+    color: #333333;
+}
+
+#box, #box-two{
+    margin-bottom: 20px;
+}
+
+#box, #box-three{
+    margin-right: 20px;
+}
+
+#box{
+    position: relative;
+    background-color: #733FC8;
+}
+
+#border-one{
+    border: 2px solid  #8961c8;
+}
+
+#design{
     position: absolute;
     border: none;
     border-radius: 0;
-    padding-left: 333px;
-    height: 95px;
+    height: 90px;
     width: auto;
+    z-index: 1;
+    align-self: flex-end;
+    top: 0px;
+    padding-right: 65px;
 }
 
-@media (max-width: 1300px){
-  main, #four, #bottom, #top{
+#box-two{
+    background-color: #49556B;
+}
+
+#box-three{
+    background-color: #FFFFFF;
+    color: #333333;
+}
+
+#box-four{
+    background-color: #333333;
+}
+
+#border-two{
+    border: 2px solid  #733FC8;
+}
+
+
+#content{
+    z-index: 2;
+}
+
+#user-info{
+    width: 110px;
+    height: 31px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#name{
+    display: flex;
     flex-direction: column;
-    height: 100%;
-    width: auto;
-  }
+    align-self: center;
+}
 
-  #Kira{
-    flex-basis: 20%;
-    width: inherit;
-  }
+#username{
+    flex-grow: 1;
+}
 
-  #quotation{
-    padding-left: 30%;
-  }
+#grat{
+    opacity: 50%;
+    flex-grow: 1;
+}
+
+#username, #grat{
+    font-size: 0.8rem;
+}
+
+#statement{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#quote{
+    opacity: 70%;
+}
+
+img{
+    border: 2px solid white;
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    border-radius: 100%;
+}
+
+@media (max-width: 1000px)
+{
+    main{
+        flex-direction: column;
+        height: auto;
+    }
+
+    #right{
+        height: auto;
+        width: 762px;
+    }
+}
+
+@media (max-width: 820px){
+
+    body{
+        align-items: flex-start;
+    }
+
+    #left, #right, main{
+        height: auto;
+        width: 100%;
+    }
+
+    #top, #bottom{
+        flex-direction: column;
+    }
+
+    #box, #box-two, #box-three, #box-four, #box-five{
+        width: 100%;
+    }
+
+    #box-three{
+        margin-bottom: 20px;
+    }
+
+    #design{
+        padding: 0;
+    }
+
 }
